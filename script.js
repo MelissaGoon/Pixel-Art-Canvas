@@ -1,7 +1,26 @@
+const resize = document.querySelector(".resize");
+const block_container = document.querySelector(".block-container")
+
+resize.addEventListener("click", () => {
+    let response = prompt("How many pixels wide?");
+    let size = parseInt(response);
+
+    if (size >= 100) {
+        alert("Too large! Try something less than 100.");
+    } else if (size == NaN || size == null) {
+        alert("Try entering a number between 1 and 100");
+    } else {
+
+        while (block_container.firstChild) {
+            block_container.removeChild(block_container.lastChild);
+        }
+        createGrid(size)
+    }
+})
+
 
 
 function createGrid(n) {
-    const block_container = document.querySelector(".block-container")
     let width = String((16 * (n+1)) + (1 * (n + 1)));
     block_container.style.width = width + "px";
 
@@ -16,4 +35,4 @@ function createGrid(n) {
     }
 }
 
-createGrid(17);
+createGrid(16);
