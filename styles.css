@@ -1,11 +1,21 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(211, 163, 255);
+}
 .block {
     width: 16px;
     height: 16px;
-    background-color: black;
-    margin: 2px;
+    margin: 1px;
 }
 
+
 .block-container {
+    margin: 50px;
     display: flex;
     flex-wrap: wrap;
+    padding: 4px;
+    width: 290px;
+    border: 2px rgb(166, 255, 0) dashed;
 }
