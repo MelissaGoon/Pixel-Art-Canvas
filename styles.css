@@ -1,9 +1,18 @@
 body {
+    background-color: rgb(77, 127, 254);
+    font-family: "Pixelify Sans", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 50px;
+}
+
+.sketch {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(211, 163, 255);
+   
 }
+
 .block {
     width: 16px;
     height: 16px;
@@ -12,10 +21,11 @@ body {
 
 
 .block-container {
-    margin: 50px;
+    margin: 30px;
     display: flex;
+    align-content: center;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 4px;
-    width: 290px;
-    border: 2px rgb(166, 255, 0) dashed;
+    border: 2px rgb(47, 0, 255) dashed;
 }
