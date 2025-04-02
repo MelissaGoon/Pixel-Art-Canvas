@@ -3,9 +3,11 @@ const block_container = document.querySelector(".block-container");
 const size_display = document.querySelector(".size-display");
 const reset = document.querySelector(".reset");
 const erase = document.querySelector(".erase");
+const random = document.querySelector(".random");
 
 let drawing_active = false;
 let erase_active = false;
+let random_active = false;
 
 block_container.addEventListener("mousedown", () => { drawing_active = true; });
 block_container.addEventListener("mouseup", () => { drawing_active = false; });
@@ -28,21 +30,40 @@ reset.addEventListener("click", () => {
 erase.addEventListener("click", () => {
     if (erase_active) {
         erase_active = false;
-        erase.style.backgroundColor = 'rgb(47, 0, 255)';
-        erase.style.color = 'white';
+        erase.classList.remove("active-button");
     } else if (!erase_active) {
         erase_active = true;
-        erase.style.backgroundColor = 'rgb(220, 247, 16)';
-        erase.style.color = 'rgb(47, 0, 255)';
+        random_active = false;
+        erase.classList.add("active-button");
+        random.classList.remove("active-button");       
     }
 })
+
+random.addEventListener("click", () => {
+    if (random_active) {
+        random_active = false;
+        random.classList.remove("active-button");
+    } else if (!random_active) {
+        random_active = true;
+        erase_active = false;
+        random.classList.add("active-button");
+        erase.classList.remove("active-button"); 
+    }
+
+})
+
+
 
 function changeColor(block, event) {
     if (drawing_active || event.type == 'click') {
         if (erase_active) {
             block.style.backgroundColor = 'white';
+        } else if (random_active) {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            block.style.backgroundColor = randomColor;
+
         } else {
-            block.style.backgroundColor = 'rgb(47, 0, 255)';
+            block.style.backgroundColor = 'rgb(11, 0, 59)';
         }
     }
 }
