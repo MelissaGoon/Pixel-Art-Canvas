@@ -32,9 +32,9 @@ button:hover {
 }
 
 .block {
-    width: 16px;
-    height: 16px;
-    margin: 1px;
+    flex:auto;
+    background-color: white;
+    box-sizing: border-box;
 }
 
 
@@ -44,6 +44,14 @@ button:hover {
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
     padding: 4px;
     border: 2px var(--my-blue) dashed;
+}
+
+.slidecontainer  {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
 }

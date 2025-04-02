@@ -15,9 +15,25 @@
 
 <body>
     <h1> Etch-A-Sketch </h1>
-    <button class="resize"> Resize </button>
-    <div class="sketch">
-        <div class="block-container"></div>
+    <div class="top-buttons">
+        <div class="slidecontainer">
+            <p>Size:</p>
+            <input type="range" min="1" max="100" value="15" class="slider" id="resize">
+            <p class="size-display">15 x 15</p>
+          </div>
+
+          <button class="reset"> Reset </button>
+
+    </div>
+    
+    <div class="sketch" draggable="false">
+        <div class="block-container" draggable="false"></div>
+    </div>
+
+    <div class="bottom-buttons">
+        <button class="erase"> Erase </button>
+        <button class="random"> Random Colours </button>
+
     </div>
    
     <script src="script.js"></script>
