@@ -11,6 +11,11 @@ body {
     margin: 50px;
 }
 
+h1 {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 50px;
+}
+
 button {
     font-family: "Pixelify Sans", sans-serif;
     font-size: large;
