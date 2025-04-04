@@ -34,6 +34,14 @@ button:hover {
     background-color: var(--light-blue);
 }
 
+.slider-button {
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(5, 91, 212,0.6);
+    text-align: center;
+}
+
 .sketch {
     display: flex;
     align-items: center;
@@ -60,8 +68,9 @@ button:hover {
     border: 2px var(--my-blue) dashed;
 }
 
-.slidecontainer {
+.slider-container {
     display: flex;
     gap: 12px;
     justify-content: center;
+    align-items: center;
 }

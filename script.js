@@ -1,9 +1,11 @@
-const resize = document.querySelector("#resize");
+const slider = document.querySelector("#resize");
 const block_container = document.querySelector(".block-container");
 const size_display = document.querySelector(".size-display");
 const reset = document.querySelector(".reset");
 const erase = document.querySelector(".erase");
 const random = document.querySelector(".random");
+const slider_btns = document.querySelectorAll(".slider-button");
+
 
 let drawing_active = false;
 let erase_active = false;
@@ -14,7 +16,7 @@ block_container.addEventListener("mouseup", () => { drawing_active = false; });
 block_container.addEventListener("mouseleave", () => { drawing_active = false; });
 
 
-resize.oninput = function () {
+slider.oninput = function () {
     let size = this.value;
     block_container.innerHTML = "";
     createGrid(size);
@@ -49,6 +51,24 @@ random.addEventListener("click", () => {
         random.classList.add("active-button");
         erase.classList.remove("active-button"); 
     }
+
+})
+
+slider_btns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const step = parseInt(btn.getAttribute('step'));
+        let newValue = parseInt(slider.value) + step;
+
+        if (newValue > 100) {
+            newValue = 100
+        } else if (newValue < 1) {
+            newValue = 1
+        }
+
+        slider.value = newValue;
+        slider.dispatchEvent(new Event('input'));
+
+    })
 
 })
 
