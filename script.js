@@ -5,11 +5,13 @@ const reset = document.querySelector(".reset");
 const erase = document.querySelector(".erase");
 const random = document.querySelector(".random");
 const slider_btns = document.querySelectorAll(".slider-button");
+const colours = document.querySelectorAll(".colours > div");
 
 
-let drawing_active = false;
-let erase_active = false;
-let random_active = false;
+var drawing_active = false;
+var erase_active = false;
+var random_active = false;
+var curr_colour = "#160b00";
 
 block_container.addEventListener("mousedown", () => { drawing_active = true; });
 block_container.addEventListener("mouseup", () => { drawing_active = false; });
@@ -72,6 +74,12 @@ slider_btns.forEach(btn => {
 
 })
 
+colours.forEach(col => {
+    col.addEventListener("click", () => {
+        curr_colour = col.style.backgroundColor;
+    })
+})
+
 
 
 function changeColor(block, event) {
@@ -83,7 +91,7 @@ function changeColor(block, event) {
             block.style.backgroundColor = "#" + randomColor;
 
         } else {
-            block.style.backgroundColor = 'rgb(11, 0, 59)';
+            block.style.backgroundColor = curr_colour;
         }
     }
 }
