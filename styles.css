@@ -3,6 +3,22 @@
     --light-blue: rgb(25, 113, 255);
 }
 
+@media only screen and (max-width: 600px) {
+    .contents {
+        display: none;
+    }
+}
+
+.mobile {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .mobile {
+        display: none !important;
+    }
+}
+
 body {
     background-color: rgb(77, 127, 254);
     font-family: "Silkscreen", sans-serif;
@@ -41,7 +57,7 @@ button:hover {
     padding: 4px;
     width: 30px;
     height: 30px;
-    background-color: rgb(5, 91, 212,0.6);
+    background-color: rgb(5, 91, 212, 0.6);
     text-align: center;
 }
 
@@ -65,6 +81,7 @@ button:hover {
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+    flex-shrink: 0;
     width: 500px;
     height: 500px;
 }
@@ -76,7 +93,9 @@ button:hover {
     align-items: center;
 }
 
-.block-container, .colours, .current-colour-box {
+.block-container,
+.colours,
+.current-colour-box {
     border: 2px var(--my-blue) dashed;
     padding: 4px;
 }
@@ -87,7 +106,7 @@ button:hover {
     gap: 5px;
 }
 
-.colours div{
+.colours div {
     width: 20px;
     height: 20px;
     background-color: white;
@@ -97,7 +116,7 @@ button:hover {
 }
 
 .colours div:hover {
-    filter: brightness(0.85); 
+    filter: brightness(0.85);
 }
 
 .current-colour {

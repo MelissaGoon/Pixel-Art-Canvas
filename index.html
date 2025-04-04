@@ -15,56 +15,61 @@
 
 <body>
     <h1> Pixel Art Canvas </h1>
-    <div class="top-buttons">
-        <div class="slider-container">
-            <p>Size:</p>
-            <input type="range" min="1" max="100" value="15" class="slider" id="resize">
-            <p class="size-display">50 x 50</p>
-            <button class="slider-button" step="-1">−</button>
-            <button class="slider-button" step="1">+</button>
+    <h2 class="mobile"> This experience is currently for desktop only :(</h2>
 
-        </div>
-
-        <button class="reset"> Reset </button>
-
-    </div>
-
-    <div class="sketch" draggable="false">
-        <div class="picker">
-            <div class="current-colour-box">
-                <div class="current-colour"> </div>
+    <div class="contents">
+        <div class="top-buttons">
+            <div class="slider-container">
+                <p>Size:</p>
+                <input type="range" min="1" max="100" value="15" class="slider" id="resize">
+                <p class="size-display">50 x 50</p>
+                <button class="slider-button" step="-1">−</button>
+                <button class="slider-button" step="1">+</button>
+    
             </div>
-
-            <div class="colours-box">
-                <div class="colours">
-                    <div style="background-color: #dc587f;"></div>
-                    <div style="background-color: #FE798C;"></div>
-                    <div style="background-color: #FEC3C7;"></div>
-                    <div style="background-color: #FEA388;"></div>
-                    <div style="background-color: #FFC875;"></div>
-                    <div style="background-color: #FEEB6B;"></div>
-                    <div style="background-color: #C4E793;"></div>
-                    <div style="background-color: #A3D37F;"></div>
-                    <div style="background-color: #71C3B7;"></div>
-                    <div style="background-color: #2E96B0;"></div>
-                    <div style="background-color: #CBF6FF;"></div>
-                    <div style="background-color: #87b5cf;"></div>
-                    <div style="background-color: #6081AC;"></div>
-                    <div style="background-color: #BF7546;"></div>
-                    <div style="background-color: #160b00;"></div>
+    
+            <button class="reset"> Reset </button>
+    
+        </div>
+    
+        <div class="sketch" draggable="false">
+            <div class="picker">
+                <div class="current-colour-box">
+                    <div class="current-colour"> </div>
                 </div>
+    
+                <div class="colours-box">
+                    <div class="colours">
+                        <div style="background-color: #dc587f;"></div>
+                        <div style="background-color: #FE798C;"></div>
+                        <div style="background-color: #FEC3C7;"></div>
+                        <div style="background-color: #FEA388;"></div>
+                        <div style="background-color: #FFC875;"></div>
+                        <div style="background-color: #FEEB6B;"></div>
+                        <div style="background-color: #C4E793;"></div>
+                        <div style="background-color: #A3D37F;"></div>
+                        <div style="background-color: #71C3B7;"></div>
+                        <div style="background-color: #2E96B0;"></div>
+                        <div style="background-color: #CBF6FF;"></div>
+                        <div style="background-color: #87b5cf;"></div>
+                        <div style="background-color: #6081AC;"></div>
+                        <div style="background-color: #BF7546;"></div>
+                        <div style="background-color: #160b00;"></div>
+                    </div>
+                </div>
+    
             </div>
-
+    
+            <div class="block-container" draggable="false"></div>
         </div>
-
-        <div class="block-container" draggable="false"></div>
+    
+        <div class="bottom-buttons">
+            <button class="erase"> Erase </button>
+            <button class="random"> Random Colours </button>
+    
+        </div>
     </div>
-
-    <div class="bottom-buttons">
-        <button class="erase"> Erase </button>
-        <button class="random"> Random Colours </button>
-
-    </div>
+    
 
     <script src="script.js"></script>
 </body>
