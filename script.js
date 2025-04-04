@@ -69,13 +69,14 @@ function changeColor(block, event) {
 }
 
 function createGrid(n) {
-    let blockSize = Math.floor(500 / n);
+    let blockSize = 499 / n;
 
     for (let i = 0; i < (n * n); i++) {
         const block = document.createElement("div");
         block.classList.toggle("block");
         block.style.width = blockSize + "px";
         block.style.height = blockSize + "px";
+
         block.draggable = false;
 
         block.addEventListener("click", (e) => changeColor(block,e));
