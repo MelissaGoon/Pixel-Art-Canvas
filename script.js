@@ -40,7 +40,7 @@ erase.addEventListener("click", () => {
         erase_active = true;
         random_active = false;
         erase.classList.add("active-button");
-        random.classList.remove("active-button");       
+        random.classList.remove("active-button");
     }
 })
 
@@ -52,7 +52,7 @@ random.addEventListener("click", () => {
         random_active = true;
         erase_active = false;
         random.classList.add("active-button");
-        erase.classList.remove("active-button"); 
+        erase.classList.remove("active-button");
     }
 
 })
@@ -77,9 +77,17 @@ slider_btns.forEach(btn => {
 
 colours.forEach(col => {
     col.addEventListener("click", () => {
-        let curr =  col.style.backgroundColor;
+        let curr = col.style.backgroundColor;
         curr_colour = curr;
         curr_col_display.style.backgroundColor = curr;
+
+        if (erase_active) {
+            erase_active = false;
+            erase.classList.remove("active-button");
+        } else if (random_active) {
+            random_active = false;
+            random.classList.remove("active-button");
+        }
     })
 })
 
@@ -90,7 +98,7 @@ function changeColor(block, event) {
         if (erase_active) {
             block.style.backgroundColor = 'white';
         } else if (random_active) {
-            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
             block.style.backgroundColor = "#" + randomColor;
 
         } else {
@@ -110,7 +118,7 @@ function createGrid(n) {
 
         block.draggable = false;
 
-        block.addEventListener("click", (e) => changeColor(block,e));
+        block.addEventListener("click", (e) => changeColor(block, e));
         block.addEventListener("mouseover", (e) => changeColor(block, e));
 
         block.addEventListener("dragstart", (event) => event.preventDefault());
