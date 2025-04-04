@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Pixel Art Canvas</title>
 </head>
@@ -17,34 +18,44 @@
         <div class="slider-container">
             <p>Size:</p>
             <input type="range" min="1" max="100" value="15" class="slider" id="resize">
-            <p class="size-display">15 x 15</p>
+            <p class="size-display">50 x 50</p>
             <button class="slider-button" step="-1">−</button>
             <button class="slider-button" step="1">+</button>
-            
-          </div>
 
-          <button class="reset"> Reset </button>
+        </div>
+
+        <button class="reset"> Reset </button>
 
     </div>
-    
+
     <div class="sketch" draggable="false">
-        <div class="colours">
-            <div style="background-color: #dc587f;"></div>
-            <div style="background-color: #FE798C;"></div>
-            <div style="background-color: #FEC3C7;"></div>
-            <div style="background-color: #FEA388;"></div>
-            <div style="background-color: #FFC875;"></div>
-            <div style="background-color: #FEEB6B;"></div>
-            <div style="background-color: #C4E793;"></div>
-            <div style="background-color: #A3D37F;"></div>
-            <div style="background-color: #71C3B7;"></div>
-            <div style="background-color: #2E96B0;"></div>
-            <div style="background-color: #CBF6FF;"></div>
-            <div style="background-color: #87b5cf;"></div>
-            <div style="background-color: #6081AC;"></div>
-            <div style="background-color: #BF7546;"></div>
-            <div style="background-color: #160b00;"></div>
+        <div class="picker">
+            <div class="current-colour-box">
+                <div class="current-colour"> </div>
+            </div>
+
+            <div class="colours-box">
+                <div class="colours">
+                    <div style="background-color: #dc587f;"></div>
+                    <div style="background-color: #FE798C;"></div>
+                    <div style="background-color: #FEC3C7;"></div>
+                    <div style="background-color: #FEA388;"></div>
+                    <div style="background-color: #FFC875;"></div>
+                    <div style="background-color: #FEEB6B;"></div>
+                    <div style="background-color: #C4E793;"></div>
+                    <div style="background-color: #A3D37F;"></div>
+                    <div style="background-color: #71C3B7;"></div>
+                    <div style="background-color: #2E96B0;"></div>
+                    <div style="background-color: #CBF6FF;"></div>
+                    <div style="background-color: #87b5cf;"></div>
+                    <div style="background-color: #6081AC;"></div>
+                    <div style="background-color: #BF7546;"></div>
+                    <div style="background-color: #160b00;"></div>
+                </div>
+            </div>
+
         </div>
+
         <div class="block-container" draggable="false"></div>
     </div>
 
@@ -53,7 +64,7 @@
         <button class="random"> Random Colours </button>
 
     </div>
-   
+
     <script src="script.js"></script>
 </body>
 

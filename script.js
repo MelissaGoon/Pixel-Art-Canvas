@@ -6,6 +6,7 @@ const erase = document.querySelector(".erase");
 const random = document.querySelector(".random");
 const slider_btns = document.querySelectorAll(".slider-button");
 const colours = document.querySelectorAll(".colours > div");
+const curr_col_display = document.querySelector(".current-colour");
 
 
 var drawing_active = false;
@@ -76,7 +77,9 @@ slider_btns.forEach(btn => {
 
 colours.forEach(col => {
     col.addEventListener("click", () => {
-        curr_colour = col.style.backgroundColor;
+        let curr =  col.style.backgroundColor;
+        curr_colour = curr;
+        curr_col_display.style.backgroundColor = curr;
     })
 })
 
@@ -117,4 +120,4 @@ function createGrid(n) {
     }
 }
 
-createGrid(15);
+createGrid(50);
